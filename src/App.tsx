@@ -7,11 +7,11 @@
 import { useScrollSpy } from './hooks/useScrollSpy';
 import { NAV_ITEMS } from './data';
 import { useLang } from './LangContext';
-import { HeroSection }     from './sections/HeroSection';
-import { AboutSection }    from './sections/AboutSection';
-import { ServicesSection } from './sections/ServicesSection';
-import { PortfolioSection } from './sections/PortfolioSection';
-import { ContactSection }  from './sections/ContactSection';
+import { HeroSection } from './sections/HeroSection';
+import { AboutSection } from './sections/AboutSection';
+// import { ServicesSection } from './sections/ServicesSection';
+// import { PortfolioSection } from './sections/PortfolioSection';
+import { ContactSection } from './sections/ContactSection';
 
 const App = () => {
   const activeSection = useScrollSpy();
@@ -30,11 +30,10 @@ const App = () => {
           <div className="hidden md:flex items-center gap-2">
             {navItems.map(item => (
               <a key={item.id} href={`#${item.id}`}
-                className={`px-4 py-2 text-sm font-bold transition-all duration-300 rounded-full ${
-                  activeSection === item.id
+                className={`px-4 py-2 text-sm font-bold transition-all duration-300 rounded-full ${activeSection === item.id
                     ? 'bg-brand-950 text-white shadow-lg scale-105'
                     : 'text-brand-600 hover:text-brand-950 hover:bg-brand-50'
-                }`}>
+                  }`}>
                 {item.label}
               </a>
             ))}
@@ -72,8 +71,8 @@ const App = () => {
       {/* ── Sections ────────────────────────────────── */}
       <HeroSection />
       <AboutSection />
-      <ServicesSection />
-      <PortfolioSection />
+      {/* <ServicesSection /> */}
+      {/* <PortfolioSection /> */}
       <ContactSection />
 
       <footer className="py-10 bg-brand-950 border-t border-white/5 text-center text-white/20 text-[9px] tracking-widest uppercase">
