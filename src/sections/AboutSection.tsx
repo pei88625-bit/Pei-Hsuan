@@ -161,14 +161,14 @@ export const AboutSection = () => {
                       <h4 className="text-base font-bold text-brand-950 leading-snug group-hover:text-brand-600 transition-colors">
                         {item.title}
                       </h4>
-                      <div className="flex flex-wrap gap-2 items-center text-xs">
+                      <div className="flex flex-wrap gap-x-2 gap-y-1 items-center text-xs">
                         <span className="px-2 py-0.5 bg-brand-50 border border-brand-200 text-brand-600 text-[9px] font-bold rounded-md flex-shrink-0">
                           {item.year}
                         </span>
-                        <span className="text-brand-500 truncate max-w-[150px] md:max-w-xs">
+                        <span className="text-brand-500 truncate max-w-[180px] md:max-w-sm">
                           {item.venue}
                         </span>
-                        <span className="text-brand-400 italic truncate max-w-[120px] md:max-w-[200px]">
+                        <span className="text-brand-400 italic">
                           {item.authors}
                         </span>
                       </div>
@@ -196,14 +196,14 @@ export const AboutSection = () => {
                       <h4 className="text-base font-bold text-brand-950 leading-snug group-hover:text-brand-600 transition-colors">
                         {item.title}
                       </h4>
-                      <div className="flex flex-wrap gap-2 items-center text-xs">
+                      <div className="flex flex-wrap gap-x-2 gap-y-1 items-center text-xs">
                         <span className="px-2 py-0.5 bg-brand-50 border border-brand-200 text-brand-600 text-[9px] font-bold rounded-md flex-shrink-0">
                           {item.year}
                         </span>
-                        <span className="text-brand-500 truncate max-w-[150px] md:max-w-xs">
+                        <span className="text-brand-500 truncate max-w-[180px] md:max-w-sm">
                           {item.venue}
                         </span>
-                        <span className="text-brand-400 italic truncate max-w-[120px] md:max-w-[200px]">
+                        <span className="text-brand-400 italic">
                           {item.authors}
                         </span>
                       </div>
@@ -270,7 +270,7 @@ export const AboutSection = () => {
                 </h4>
                 <div className="space-y-1 text-xs text-brand-500">
                   <p><strong>{lang === 'zh' ? '作者：' : 'Authors: '}</strong>{selectedPub.authors}</p>
-                  <p><strong>{lang === 'zh' ? '發表平台：' : 'Venue: '}</strong>{selectedPub.venue} ({selectedPub.year})</p>
+                  <p><strong>{lang === 'zh' ? '研討會名稱：' : 'Conference: '}</strong>{selectedPub.venue} ({selectedPub.year})</p>
                 </div>
                 <div className="w-full h-[1px] bg-brand-100/70 my-2"></div>
                 <div className="space-y-2">
